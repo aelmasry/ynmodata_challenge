@@ -1,5 +1,3 @@
-The Docker setup for PHP applications using PHP7.3-FPM and Nginx described in http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7.3-fpm
-
 ## Instructions
 1. Checkout the repository
 * ~~Create a record in your `hosts` file to point `php-docker.local` to your Docker environment~~
