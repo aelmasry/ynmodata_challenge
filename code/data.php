@@ -14,4 +14,5 @@ if (isset($_REQUEST["query"]))
     $data = $data['data'];
 }
 
+asort($data);
 echo json_encode($data, true);
