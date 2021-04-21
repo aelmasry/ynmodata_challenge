@@ -2,5 +2,10 @@
     "require": {
         "guzzlehttp/guzzle": "^6.0",
         "nahid/jsonq": "^6.0"
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
     }
 }

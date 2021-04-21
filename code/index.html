@@ -20,7 +20,22 @@
             </div>
         </div>
         <br />
-        <div id="result"></div>
+        <div >
+            <div class="table-responsive">
+                <table class="table table bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Price</th>
+                       </tr>
+                </thead> 
+                <tbody id='result'>
+
+                </tbody>
+        </table>
+        </div>
     </div>
 </body>
 
@@ -38,7 +53,21 @@
                 method: "POST",
                 data: { query: query },
                 success: function (data) {
-                    $('#result').html(data);
+                   hotels = JSON.parse(data)
+                   $('#result').empty();
+                   hotels.forEach(function(hotel){
+                        $('#result').append(`
+                    <tr>
+                        <td> ${hotel.id}</td>
+                        <td> ${hotel.name}</td>
+                        <td>${hotel.city}</td>
+                        <td>${hotel.price}</td>
+                    </tr>
+                    `
+                            );
+                    });
+                    
+
                 }
             });
         }
