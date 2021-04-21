@@ -12,8 +12,8 @@ $response = $client->request('GET', '/v3/0d6aab31-bb68-4d89-acc5-bc4148a3cff3');
 
 if (200 == $response->getStatusCode()) {
     $result =  $response->getBody();
-    // $result = json_decode($result, true);
-    // $data = $result['data'];
+    $result = json_decode($result, true);
+    $data = $result['data'];
 } else {
     return 'No response from endpoint';
 }
